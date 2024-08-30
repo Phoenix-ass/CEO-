@@ -1,0 +1,207 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    display: flex;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: -o-flex;
+    margin: 0 auto;
+    width: 1200px;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+    background: url(../Images/bg.jpg);
+    background-size: cover;
+}
+.box{
+
+    position: relative;
+    margin: 20px;
+    border-radius: 20px;
+    transform-style: preserve-3d;
+}
+.box .card{
+    
+    position: relative;
+    background: rgba(255, 255, 255, 0.1);
+    width: 300px;
+    min-height: 400px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.5);
+    border-top:1px solid rgba(255,255,255,0.75) ;
+    border-left: 1px solid rgba(255,255,255,0.75);
+    border-radius: 20px;
+    box-shadow: 0 25px 45px rgba(0,0,0,0.05);
+    transform-style: preserve-3d;
+}
+.elements{
+    position: absolute;
+    top: 50px;
+    left: -30px;
+    width: 100px;
+    height: 100px;
+    background: rgba(255,255,255,0.1);
+    transform: translateZ(80px);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.5);
+    border-top:1px solid rgba(255,255,255,0.75) ;
+    border-left: 1px solid rgba(255,255,255,0.75);
+    border-radius: 10px;
+    box-shadow: 0 25px 45px rgba(0,0,0,0.05);
+}
+.elements.bg::before{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url(../Images/colormedia.png);
+    background-size: 60px;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: 0.5s;
+}
+.box:hover .elements.bg::before{
+    opacity: 1;
+}
+.elements.imgBx{
+    top: 0;
+    left: initial;
+    right: 60px;
+    width: 120px;
+    height: 100px;
+    padding: 10px;
+    transform: translateZ(120px);
+}
+.elements.imgBx img{
+    position: absolute;
+    width: calc(100% - 15.5px);
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.5);
+    border-top:1px solid rgba(255,255,255,0.75) ;
+    border-left: 1px solid rgba(255,255,255,0.75);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.05);
+    opacity: 0;
+    transition: 0.5s;
+}
+.box:hover .elements.imgBx img{
+    opacity: 1;
+}
+.elements.name{
+    top: 235px;
+    left: initial;
+    right: 0;
+    width: 100%;
+    padding: 10px;
+    text-align: right;
+    transform: translateZ(180px);
+    background: transparent;
+    backdrop-filter: blur(0px);
+    border: none;
+    box-shadow: none;
+    color: brown;
+    opacity: 0;
+    transition: 0.5s;
+    transition-delay: 0.25s;
+}
+.box:hover .elements.name{
+    top: 135px;
+    opacity: 1;
+}
+.elements.content{
+    top: initial;
+    left: initial;
+    bottom: 0;
+    right: -20px;
+    width: 85%;
+    min-height: 200px;
+    padding: 10px;
+    transform: translateZ(180px);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.elements.content p{
+    position: relative;
+    color: brown;
+    font-size: 0.85rem;
+    transition: 0.5s;
+    transition-delay: 0.5s;
+    opacity: 0;
+}
+.box:hover .elements.content p{
+    opacity: 1;
+}
+.slider-btns{
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    z-index: 110;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+.swiper-button-next,
+.swiper-button-prev{
+    position: static;
+}
+.swiper-button-next{
+    margin-right: -50px;
+}
+.swiper-button-next::after,
+.swiper-button-prev::after{
+    color: #888;
+    text-shadow: 2px 2px 16px rgba(16, 92, 179, 0.22);
+    font-size: 32px;
+}
+
+.box{
+
+    position: relative;
+    border-radius: 20px;
+    transform-style: preserve-3d;
+}
+.box .card{
+    
+    position: relative;
+    background: rgba(255, 255, 255, 0.1);
+    width: 300px;
+    min-height: 400px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.5);
+    border-top:1px solid rgba(255,255,255,0.75) ;
+    border-left: 1px solid rgba(255,255,255,0.75);
+    border-radius: 20px;
+    box-shadow: 0 25px 45px rgba(0,0,0,0.05);
+    transform-style: preserve-3d;
+}
+.elements.name{
+    
+    left: initial;
+    right: 0;
+    width: 100%;
+    
+    text-align: right;
+    transform: translateZ(180px);
+    background: transparent;
+    backdrop-filter: blur(0px);
+    border: none;
+    box-shadow: none;
+    color: brown;
+    opacity: 0;
+    transition: 0.5s;
+    transition-delay: 0.25s;
+}
+.box:hover .elements.name{
+    
+    opacity: 1;
+}
